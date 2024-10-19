@@ -5,22 +5,25 @@ function mergeSort(array) {
         // then compare this number to the other sorted half
     }
     //split array
-    newArrayLeft = array.slice(0, Math.round(array.length / 2))
-    newArrayRight = array.slice(Math.round(array.length / 2), array.length)
+    let newArrayLeft = array.slice(0, Math.round(array.length / 2))
+    console.log(newArrayLeft, 'newarrayleft')
+    let newArrayRight = array.slice(Math.round(array.length / 2), array.length)
     console.log(newArrayRight, 'newarrayright')
 
-    let newLeft = mergeSort(newArrayLeft) // returns 2
+    //both at once??
+    let newLeft = mergeSort(newArrayLeft)
     console.log(newLeft, "newleft")
-    let newRight = mergeSort(newArrayRight) // returns 1
+    let newRight = mergeSort(newArrayRight) //newRight = half right half of new left
     console.log(newRight, 'newRight')
 
     // mergeSort([2, 1, 0, 3])
-    //     mergeSort([0, 3])
-    //         mergeSort([0]) // returns newLeft = 0
-    //         mergeSort([3]) // returns newRight = 3
-    //     mergeSort([2, 1,])
+    //     mergeSort([2, 1,]) returns [1, 2]
     //         mergeSort([2]) //returns newLeft = 2
     //         mergeSort([1]) // returns newRight = 1
+
+    //     mergeSort([0, 3]) Why doesnt this run??
+    //         mergeSort([0]) // returns newLeft = 0
+    //         mergeSort([3]) // returns newRight = 3
         
 
 
